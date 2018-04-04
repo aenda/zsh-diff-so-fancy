@@ -5,7 +5,7 @@
 f() {
     [ -z "$GIT_PREFIX" ] || \
         cd "$GIT_PREFIX" && \
-            git diff --color "$@" | diff-so-fancy | less --tabs=4 -iRFX
+            git diff --color "$@" | $ZPLUG_REPOS/zdharma/zsh-diff-so-fancy/bin/diff-so-fancy | less --tabs=4 -iRFX
 }
 
 f "$@"
